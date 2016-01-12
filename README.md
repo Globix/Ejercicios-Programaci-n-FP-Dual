@@ -1,2 +1,2 @@
-# Ejercicios-Programaci-n-FP-Dual
+# Ejercicios-Programacion-FP-Dual
 Ejercicios de Programación
