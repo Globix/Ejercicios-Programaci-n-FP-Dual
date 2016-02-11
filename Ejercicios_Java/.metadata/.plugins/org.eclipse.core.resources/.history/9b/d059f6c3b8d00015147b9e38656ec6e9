@@ -1,0 +1,39 @@
+package figuras;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<FiguraGeometrica> figuras = new ArrayList<>();
+		
+		Rectangulo rectanguloSinValores = new Rectangulo();
+		Rectangulo rectanguloConNombre = new Rectangulo("Rectangulo2");
+		Rectangulo rectanguloCompeto = new Rectangulo ("Rectangulo3", 4, 5);
+		Circulo circuloSinValores = new Circulo();
+		Circulo circuloConNombre = new Circulo("Circulo2");
+		Circulo circuloCompeto = new Circulo ("Circulo3", 4);
+		Cuadrado cuadradoSinValores = new Cuadrado();
+		Cuadrado cuadradoConNombre = new Cuadrado("Cuadrado2");
+		Cuadrado cuadradoCompeto = new Cuadrado ("Cuadrado3", 4);
+		
+		figuras.add(rectanguloSinValores);
+		figuras.add(rectanguloConNombre);
+		figuras.add(rectanguloCompeto);
+		figuras.add(circuloSinValores);
+		figuras.add(circuloConNombre);
+		figuras.add(circuloCompeto);
+		figuras.add(cuadradoSinValores);
+		figuras.add(cuadradoConNombre);
+		figuras.add(cuadradoCompeto);
+		
+		for (FiguraGeometrica figura: figuras){
+			System.out.println(figura.toString());
+		}
+		
+		
+
+	}
+
+}

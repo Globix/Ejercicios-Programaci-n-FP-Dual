@@ -1,0 +1,29 @@
+package figuras;
+
+public abstract class FiguraGeometrica {
+	
+	private String nombre;
+	
+	public FiguraGeometrica(){
+		this.nombre = "SinAsignar";
+	}
+	
+	public FiguraGeometrica(String nombre){
+		this.nombre = nombre;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public abstract double calcularArea();
+
+	@Override
+	public String toString() {
+		return "FiguraGeometrica [nombre=" + this.nombre + ", area=" + calcularArea() + "]";
+	}
+}
