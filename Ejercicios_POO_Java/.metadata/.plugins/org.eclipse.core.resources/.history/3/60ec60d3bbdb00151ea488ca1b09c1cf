@@ -1,0 +1,28 @@
+package esctructurasDeDatos;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		menu();
+
+	}
+
+	private static void menu() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Introduzca un número para acceder a:");
+		System.out.println("- Ejercicio 1");
+		System.out.println("- Ejercicio 2");
+		System.out.println("- Ejercicio 3");
+		System.out.println("- Ejercicio 4");
+		System.out.println("- Ejercicio 5");
+		System.out.println("- Ejercicio 6");
+		
+		try {
+		int respuesta = scanner.nextInt();
+		if (respuesta)
+	}
+
+}

@@ -1,0 +1,17 @@
+package esctructurasDeDatos;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		menu();
+
+	}
+
+	private static void menu() {
+		Scanner scanner = new Scanner();
+		
+	}
+
+}
