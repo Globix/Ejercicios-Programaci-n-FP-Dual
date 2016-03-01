@@ -13,7 +13,7 @@ public class Main {
 	private static void menu() {
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Introduzca un numero para acceder a:");
+		System.out.println("Introduzca un numero para acceder a:\n");
 		System.out.println("1 - Ejercicio 1");
 		System.out.println("2 - Ejercicio 2");
 		System.out.println("3 - Ejercicio 3");
@@ -24,8 +24,8 @@ public class Main {
 
 		try {
 			System.out.print("Respuesta: ");
-			System.out.println("");
 			int respuesta = scanner.nextInt();
+			System.out.println("");
 			switch (respuesta){
 				case 1: 
 					PrimerEjercicio.main(null);
@@ -49,12 +49,12 @@ public class Main {
 					System.out.println("¡Hasta luego!");
 					break;
 				default:
-					System.out.println("El numero no se encuentra dentro de las opciones establecidas");
+					System.out.println("El numero introducido no es valido");
 					menu();
 					break;
 			}
 		} catch (Exception e){
-			System.out.println("No has introducido un numero valido");
+			System.out.println("No has introducido un valor valido");
 			menu();
 		}
 	}

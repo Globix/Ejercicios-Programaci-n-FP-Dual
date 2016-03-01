@@ -1,0 +1,15 @@
+package casosTest;
+
+import ejercicios.CuartoEjercicio;
+
+public class CT_CuartoEjercicio {
+
+	public static void main(String[] args) {
+		
+		int [][] matrizUnaria = new int[3][3];
+		
+		CuartoEjercicio.calcularMatrizUnaria(matrizUnaria);
+
+	}
+
+}

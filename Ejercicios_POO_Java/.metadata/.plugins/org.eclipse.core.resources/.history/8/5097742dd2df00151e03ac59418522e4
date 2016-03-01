@@ -1,0 +1,22 @@
+package ejercicios;
+
+import main.Main;
+
+public class TercerEjercicio {
+
+	public static void main(String[] args) {
+		
+		final int numeroRangoMinimo = 25;
+		final int numeroRangoMaximo = 51;
+		int[] lista = new int[25];
+				
+		lista = numerosAleatorios(numeroRangoMinimo, numeroRangoMaximo, lista);
+		
+		System.out.println("Bienvenido al ejercicio 3\n");
+		
+		
+		System.out.println("Fin del ejercicio\n");
+		Main.main(null);
+	}
+
+}

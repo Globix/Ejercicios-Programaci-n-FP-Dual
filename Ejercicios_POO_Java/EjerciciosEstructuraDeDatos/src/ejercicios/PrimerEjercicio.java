@@ -6,18 +6,17 @@ public class PrimerEjercicio {
 
 	public static void main(String[] args) {
 		
-		double[][] ventas = {{50, 24, 16, 789, 35},
-						  {4566, 2356, 72.45, 12.2, 67},
-						  {1, 1, -4, 3, 4}};
+		double[] venta = {50, 24, 16, 789, 35};
 		
-		for (double[] venta:ventas){
-			calcularVentas(venta);
-		}
-		System.out.println("Fin del ejercicio");
+		System.out.println("Bienvenido al ejercicio 1\n");
+		
+		calcularVentas(venta);
+		
+		System.out.println("Fin del ejercicio\n");
 		Main.main(null);
 	}
 	
-	private static void calcularVentas(double[] venta){
+	public static void calcularVentas(double[] venta){
 		double mayorVenta = venta[0];
 		double menorVenta = venta[0];
 		double totalVenta = 0;
