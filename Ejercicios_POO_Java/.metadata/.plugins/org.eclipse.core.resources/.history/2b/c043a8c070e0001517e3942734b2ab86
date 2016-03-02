@@ -1,0 +1,35 @@
+package main;
+
+import alumno.Alumno;
+import colaErasmus.ColaErasmus;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		// CASO TEST MOSTRAR ALUMNO
+		System.out.println("CASO TEST MOSTRAR ALUMNO\n");
+		
+		Alumno alumno = new Alumno("Enrique", "Miranda", "Riquero");
+		
+		alumno.mostrarAlumno();
+
+		// CASO TEST MOSTRAR ALUMNOS 1 POR 1 POR ORDEN DE COLA
+		System.out.println("CASO TEST MOSTRAR ALUMNOS 1 POR 1 POR ORDEN DE COLA\n");
+		
+		ColaErasmus colaAlumnos = new ColaErasmus();
+
+		String[][] casosAlumnos = { { "aitor", "algo", "lala" }, { "victor", "noob", "report" },
+				{ "david", "kjash", "laks" } };
+
+		for (String[] casoAlumno : casosAlumnos) {
+			alumno = new Alumno(casoAlumno[0], casoAlumno[1], casoAlumno[2]);
+			colaAlumnos.anyadirAlumno(alumno);
+			colaAlumnos.mostrarPosicionCola(alumno);
+		}
+		
+		// CASO TEST MOSTRAR COLA
+		System.out.println("CASO TEST MOSTRAR COLA\n");
+		
+		colaAlumnos.mostrarCola();
+	}
+}

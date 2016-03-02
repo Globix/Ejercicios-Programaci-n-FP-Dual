@@ -1,0 +1,61 @@
+package main;
+
+import alumno.Alumno;
+import colaErasmus.ColaErasmus;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		// CASO TEST MOSTRAR ALUMNO
+		System.out.println("CASO TEST MOSTRAR ALUMNO\n");
+		
+		Alumno alumno = new Alumno("Enrique", "Miranda", "Riquero");
+		
+		alumno.mostrarAlumno();
+
+		// CASO TEST MOSTRAR ALUMNOS 1 POR 1 POR ORDEN DE COLA
+		System.out.println("CASO TEST MOSTRAR ALUMNOS 1 POR 1 POR ORDEN DE COLA\n");
+		
+		ColaErasmus colaAlumnos = new ColaErasmus();
+
+		String[][] casosAlumnos = { { "aitor", "lepe", "oyaga" }, { "victor", "santos", "algide" },
+				{ "david", "mejide", "robles" } };
+
+		for (String[] casoAlumno : casosAlumnos) {
+			alumno = new Alumno(casoAlumno[0], casoAlumno[1], casoAlumno[2]);
+			colaAlumnos.anyadirAlumno(alumno);
+			colaAlumnos.mostrarPosicionCola(alumno);
+		}
+		
+		// CASO TEST MOSTRAR COLA
+		System.out.println("CASO TEST MOSTRAR COLA\n");
+		
+		colaAlumnos.mostrarCola();
+		
+		// CASO TEST MOSTRAR TAMAÑO COLA
+		System.out.println("CASO TEST MOSTRAR TAMAÑO COLA\n");
+		
+		colaAlumnos.mostrarTamanyoCola();
+		
+		// CASO TEST ELIMINAR ALUMNO DE LA COLA POR POSICION
+		System.out.println("CASO TEST ELIMINAR ALUMNO DE LA COLA\n");
+		
+		colaAlumnos.eliminarAlumnoPosicion(1);
+		colaAlumnos.mostrarCola();
+		
+		// CASO TEST ELIMINAR ALUMNO DE LA COLA POR ALUMNO
+		System.out.println("CASO TEST ELIMINAR ALUMNO DE LA COLA POR ALUMNO\n");
+		
+		alumno = new Alumno("Enrique", "Miranda", "Riquero");
+		
+		colaAlumnos.anyadirAlumno(alumno);
+		colaAlumnos.mostrarCola();
+		
+		System.out.println("-----------------------------------\n");
+		
+		alumno.setNombre(nombre);
+		colaAlumnos.eliminarAlumno(alumno);
+		colaAlumnos.mostrarCola();
+		
+	}
+}

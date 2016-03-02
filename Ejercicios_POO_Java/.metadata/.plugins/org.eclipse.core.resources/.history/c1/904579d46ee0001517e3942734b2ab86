@@ -1,0 +1,31 @@
+package main;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+import alumno.Alumno;
+import colaErasmus.ColaErasmus;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		// CASO TEST MOSTRAR ALUMNO
+		Alumno alumno = new Alumno("Enrique", "Miranda", "Riquero");
+		
+		alumno.mostrarAlumno();
+
+		// CASO TEST MOSTRAR ALUMNOS 1 POR 1 POR ORDEN DE COLA
+		
+		ColaErasmus colaAlumnos = new ColaErasmus();
+
+		String[][] casosAlumnos = { { "aitor", "algo", "lala" }, { "victor", "noob", "report" },
+				{ "david", "kjash", "laks" } };
+
+		for (String[] casoAlumno : casosAlumnos) {
+			alumno = new Alumno(casoAlumno[0], casoAlumno[1], casoAlumno[2]);
+			colaAlumnos.anyadirAlumno(alumno);
+			colaAlumnos.mostrarPosicionCola(alumno);
+		}
+		alumno = new Alumno("victor", "noob", "report");
+	}
+}

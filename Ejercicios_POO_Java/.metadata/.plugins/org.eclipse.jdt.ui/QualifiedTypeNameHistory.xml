@@ -2,7 +2,10 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="ejercicios.PrimerEjercicio"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="ejercicios.PrimerEjercicio"/>
+<fullyQualifiedTypeName name="ejercicios.SegundoEjercicio"/>
+<fullyQualifiedTypeName name="ejercicios.CuartoEjercicio"/>
 </qualifiedTypeNameHistroy>
