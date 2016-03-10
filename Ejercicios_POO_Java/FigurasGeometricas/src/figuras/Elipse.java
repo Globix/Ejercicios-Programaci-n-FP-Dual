@@ -55,5 +55,8 @@ public class Elipse extends FiguraGeometrica{
 		return "Elipse [nombre=" + super.getNombre() + ", area=" + calcularArea() + "]";
 	}
 
-
+	@Override
+	public void draw(){
+		System.out.println("Esto es un elipse");
+	}
 }

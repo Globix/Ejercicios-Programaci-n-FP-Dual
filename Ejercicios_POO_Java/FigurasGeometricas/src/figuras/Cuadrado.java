@@ -41,5 +41,12 @@ public class Cuadrado extends FiguraGeometrica {
 		return "Cuadrado [nombre=" + super.getNombre() + ", area=" + calcularArea() + "]";
 	}
 	
+	@Override
+	public void draw(){
+		System.out.println("Esto es un cuadrado");
+	}
 	
+	public void applyTheme(){
+		System.out.println("Aplicado tema chulo");
+	}
 }

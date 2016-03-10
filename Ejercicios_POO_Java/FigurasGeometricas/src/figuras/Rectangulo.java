@@ -55,4 +55,12 @@ public class Rectangulo extends FiguraGeometrica {
 		return "Rectangulo [nombre=" + super.getNombre() + ", area=" + calcularArea() + "]";
 	}
 
+	@Override
+	public void draw(){
+		System.out.println("Esto es un rectángulo");
+	}
+	
+	public void applyTheme(){
+		System.out.println("Aplicado tema chulo");
+	}
 }

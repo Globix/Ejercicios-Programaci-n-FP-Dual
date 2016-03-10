@@ -1,6 +1,6 @@
 package figuras;
 
-public abstract class FiguraGeometrica {
+public abstract class FiguraGeometrica implements draw.Drawable {
 	
 	private String nombre;
 	
@@ -22,4 +22,5 @@ public abstract class FiguraGeometrica {
 	
 	public abstract double calcularArea();
 
+	//public abstract void draw();
 }

@@ -1,6 +1,6 @@
 package figuras;
 
-public class Circulo extends FiguraGeometrica {
+public class Circulo extends FiguraGeometrica implements draw.Drawable {
 	
 	private double radio;
 	
@@ -41,6 +41,15 @@ public class Circulo extends FiguraGeometrica {
 	@Override
 	public String toString() {
 		return "Circulo [nombre=" + super.getNombre() + ", area=" + calcularArea() + "]";
+	}
+	
+
+	public void draw(){
+		System.out.println("Esto es un Circulo");
+	}
+	
+	public void applyTheme(){
+		System.out.println("Aplicado tema chulo");
 	}
 
 }
