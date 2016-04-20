@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.edreams.es" 
+	xmlns:ed="http://www.edreams.es"
+	xmlns:wac="http://www.iata.com/wac"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	
+	<xsd:import namespace="http://www.iata.com/wac"
+		schemaLocation="../codigos_IATA/WAC.xsd">
+	</xsd:import>
+	
+	<xsd:include schemaLocation="edreams_simple_types"></xsd:include>
+	
+	<!-- Este fichero necesita ser refactorizado para que no se vea como una gran masa uniforme.
+		La refactorización se realizara en los próximos días -->
+
+	<xsd:element name="flights">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fly">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="from">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute name="IATA_code" type="wac:WAC" use="optional"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="to">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute name="IATA_code" type="wac:WAC" use="optional"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="departure">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="day" type="ed:typeDay">
+										</xsd:element>
+										<xsd:element name="month">
+										</xsd:element>
+										<xsd:element name="year">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="return">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="day">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:integer">
+													<xsd:minInclusive value="1"></xsd:minInclusive>
+													<xsd:maxInclusive value="31"></xsd:maxInclusive>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="month">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:integer">
+													<xsd:minInclusive value="1"></xsd:minInclusive>
+													<xsd:maxInclusive value="12"></xsd:maxInclusive>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="year">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:integer">
+													<xsd:pattern value="[0-9]{4}"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="passengers">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="adult" default="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:integer">
+													<xsd:minInclusive value="1"></xsd:minInclusive>
+													<xsd:maxInclusive value="100"></xsd:maxInclusive>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="children" default="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:integer">
+													<xsd:maxInclusive value="100"></xsd:maxInclusive>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="infant" default="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:integer">
+													<xsd:maxInclusive value="100"></xsd:maxInclusive>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="method" type="xsd:string" default="Return" use="optional"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

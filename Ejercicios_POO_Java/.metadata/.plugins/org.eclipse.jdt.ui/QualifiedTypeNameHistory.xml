@@ -8,4 +8,6 @@
 <fullyQualifiedTypeName name="ejercicios.PrimerEjercicio"/>
 <fullyQualifiedTypeName name="ejercicios.SegundoEjercicio"/>
 <fullyQualifiedTypeName name="ejercicios.CuartoEjercicio"/>
+<fullyQualifiedTypeName name="java.awt.Point"/>
+<fullyQualifiedTypeName name="rover.Rover"/>
 </qualifiedTypeNameHistroy>

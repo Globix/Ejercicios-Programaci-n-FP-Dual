@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emt:estacion xmlns:emt="https://api.mobipalma.mobi/docs/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://api.mobipalma.mobi/docs/ ../estacion.xsd ">
+  <emt:id>0</emt:id>
+  <emt:direccion>0</emt:direccion>
+  <emt:numeroAnclajes>0</emt:numeroAnclajes>
+  <emt:anclajes>
+    <emt:bicicleta>emt:bicicleta</emt:bicicleta>
+  </emt:anclajes>
+</emt:estacion>

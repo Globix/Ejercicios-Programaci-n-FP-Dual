@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/estacion" 
+xmlns:emt="https://api.mobipalma.mobi/docs/" 
+elementFormDefault="qualified">
+
+<xsd:element name="estacion" type="typeEstacion"></xsd:element>
+
+<xsd:complexType name="typeEstacion">
+	<xsd:sequence>
+		<xsd:element name="estacion" type="typeEstacion"></xsd:element>
+	</xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema>

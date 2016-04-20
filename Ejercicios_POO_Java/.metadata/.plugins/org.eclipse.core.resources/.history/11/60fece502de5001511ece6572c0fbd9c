@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.edreams.es" xmlns:ed="http://www.edreams.es"
+	elementFormDefault="qualified">
+
+	<xsd:element name="flights">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fly">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="from">
+							</xsd:element>
+							<xsd:element name="to">
+							</xsd:element>
+							<xsd:element name="departure">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="day">
+										</xsd:element>
+										<xsd:element name="month">
+										</xsd:element>
+										<xsd:element name="year">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="return">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="day">
+										</xsd:element>
+										<xsd:element name="month">
+										</xsd:element>
+										<xsd:element name="year">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.edreams.es" 
+	xmlns:ed="http://www.edreams.es"
+	elementFormDefault="qualified">
+	
+	<xsd:import namespace="http://www.iata.com/wac"
+		xmlns:wac="http://www.iata.com/wac"
+		wac:schemaLocation="../codigos_IATA/WAC.xsd">
+	</xsd:import>
+
+	<xsd:element name="flights">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fly">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="from">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute name="IATA_code" type="wac:WAC" use="optional"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="to">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:string">
+											<xsd:attribute name="IATA_code" type="xsd:string" use="optional"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="departure">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="day">
+										</xsd:element>
+										<xsd:element name="month">
+										</xsd:element>
+										<xsd:element name="year">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="return">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="day">
+										</xsd:element>
+										<xsd:element name="month">
+										</xsd:element>
+										<xsd:element name="year">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="passengers">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="adult">
+										</xsd:element>
+										<xsd:element name="children">
+										</xsd:element>
+										<xsd:element name="infant">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="method" type="xsd:string" default="Return" use="optional"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

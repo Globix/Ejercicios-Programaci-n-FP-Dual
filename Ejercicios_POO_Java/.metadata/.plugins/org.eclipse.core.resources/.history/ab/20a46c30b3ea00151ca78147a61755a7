@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.edreams.es" xmlns:ed="http://www.edreams.es"
+	xmlns:wac="http://www.iata.com/wac" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xsd:import namespace="http://www.iata.com/wac"
+		schemaLocation="../codigos_IATA/WAC.xsd">
+	</xsd:import>
+
+	<xsd:include schemaLocation="edreams_simple_types.xsd"></xsd:include>
+
+	<!-- Este fichero necesita ser refactorizado para que no se vea como una 
+		gran masa uniforme. La refactorización se realizara en los próximos días -->
+
+	<xsd:element name="flights">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="fly">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="from" type="ed:typeWAC">
+							</xsd:element>
+							<xsd:element name="to" type="ed:typeWAC">
+							</xsd:element>
+							<xsd:element name="departure">
+
+							</xsd:element>
+							<xsd:element name="return" type="typeDate">
+							</xsd:element>
+							<xsd:element name="passengers">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="adult" type="ed:typeAdult"
+											default="1">
+										</xsd:element>
+										<xsd:element name="children" type="ed:typeChildren"
+											default="0">
+										</xsd:element>
+										<xsd:element name="infant" type="ed:typeInfant"
+											default="0">
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="method" type="xsd:string"
+							default="Return" use="optional" />
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="typeWAC">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="IATA_code" type="wac:WAC" use="optional" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="typeDate">
+		<xsd:sequence>
+			<xsd:element name="day" type="ed:typeDay">
+			</xsd:element>
+			<xsd:element name="month" type="ed:typeMonth">
+			</xsd:element>
+			<xsd:element name="year" type="ed:typeYear">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

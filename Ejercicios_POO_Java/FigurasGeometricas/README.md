@@ -10,7 +10,7 @@ La finalidad de este ejericio era el uso de herencia en Java aprendida en la ses
 Definición del ejercicio
 ---------------------
 
-Creación de una clase abstracta `FigurasGeometricas` y de las clases `Cuadrado`, `Circulo`, `Rectangulo` y `Elipse` que heredan de esta.
+Creación de una clase abstracta `FigurasGeometricas.java` y de las clases `Cuadrado.java`, `Circulo.java`, `Rectangulo.java` y `Elipse.java` que heredan de esta.
 
 > Más información en el documento *EjercicioFigurasGeometricas.docx*
 

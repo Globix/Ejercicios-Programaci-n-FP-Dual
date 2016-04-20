@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ed:flights
+xmlns:ed="http://www.edreams.es"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.edreams.es edreams.xsd">
+	<ed:fly method="Return">
+		<ed:from IATA_code="PMI">Palma de Mallorca</ed:from>
+		<ed:to IATA_code="SDR">Santander</ed:to>
+		<ed:departure>
+			<ed:day>26</ed:day>
+		    <ed:month>02</ed:month>
+		    <ed:year>2016</ed:year>
+		</ed:departure>
+		<ed:return>
+			<ed:day>03</ed:day>
+		    <ed:month>03</ed:month>
+		    <ed:year>206</ed:year>
+		</ed:return>
+		<ed:passengers>
+			<ed:adult>1</ed:adult>
+			<ed:children>0</ed:children>
+			<ed:infant>0</ed:infant>
+		</ed:passengers>
+	</ed:fly>
+</ed:flights>

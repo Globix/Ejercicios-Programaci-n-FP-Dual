@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.edreams.es" xmlns:ed="http://www.edreams.es"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:simpleType name="typeDay">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="1"></xsd:minInclusive>
+			<xsd:maxInclusive value="31"></xsd:maxInclusive>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="typeMonth">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="1"></xsd:minInclusive>
+			<xsd:maxInclusive value="12"></xsd:maxInclusive>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="typeYear">
+		<xsd:restriction base="xsd:integer">
+			<xsd:pattern value="[0-9]{4}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>
